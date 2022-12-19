@@ -1,0 +1,36 @@
+{
+  "name": "api-nodejs",
+  "version": "1.0.0",
+  "description": "basic API for learning purpose",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-dev": "nodemon -e ts,json src/server.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielmsdiaz/api-nodejs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danielmsdiaz/api-nodejs/issues"
+  },
+  "homepage": "https://github.com/danielmsdiaz/api-nodejs#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "pg": "^8.8.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.27.0",
+    "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.15",
+    "@types/node": "^18.11.17",
+    "@types/sequelize": "^4.28.14",
+    "@types/validator": "^13.7.10"
+  }
+}
