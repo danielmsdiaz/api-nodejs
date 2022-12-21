@@ -13,6 +13,7 @@ server.use(cors());
 
 //
 server.use(express.urlencoded({extended: true}));
+server.use(express.json());
 
 // servidor usando as rotas
 server.use("/api", userRoutes);

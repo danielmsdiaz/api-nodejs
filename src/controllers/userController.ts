@@ -7,9 +7,17 @@ export const pong = (req: Request, res: Response) => {
 }
 
 export const createUser = async (req: Request, res: Response) => {
-    const {name, born_date, email} = req.body;
-    const user = await User.create({name, born_date, email});
-    res.json({Usuario: user});
+    const name = req.body.name;
+    const email = req.body.email;
+    const born_date = req.body.born_date;
+    
+    try{
+        const user = await User.create({name, born_date, email});
+        res.json({Usuario: user});
+    }catch(error: any) {
+        //res.status(error.response.status)
+        return res.send(error.message);
+    }
 }
 
 export const listAllUsers = async (req: Request, res: Response) => {
